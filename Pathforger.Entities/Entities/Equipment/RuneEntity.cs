@@ -1,8 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-namespace PathforgerDb.Entities.Equipment;
+namespace Pathforger.Entities.Entities.Equipment;
 [Table("Runes")]
 public class RuneEntity
 {

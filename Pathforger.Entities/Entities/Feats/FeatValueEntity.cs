@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using PathforgerDb.Entities.Base;
+using Pathforger.Entities.Entities.Base;
 
-namespace PathforgerDb.Entities.Feats;
+namespace Pathforger.Entities.Entities.Feats;
 
 [Table("FeatValues")]
 public class FeatValueEntity : BaseEntity

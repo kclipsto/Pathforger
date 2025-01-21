@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using PathforgerDb.Entities.Base;
+using Pathforger.Entities.Entities.Base;
 
-namespace PathforgerDb.Entities.Equipment;
+namespace Pathforger.Entities.Entities.Equipment;
 
 [Table("Equipment")]
 public class EquipmentEntity : BaseEntity

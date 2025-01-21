@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using PathforgerDb.Entities.Base;
-using PathforgerDb.Entities.Feats;
+using Pathforger.Entities.Entities.Base;
+using Pathforger.Entities.Entities.Feats;
 
-namespace PathforgerDb.Entities.Ancestries;
+namespace Pathforger.Entities.Entities.Ancestries;
 
 [Table("Ancestries")]
 public class AncestryEntity : BaseEntity

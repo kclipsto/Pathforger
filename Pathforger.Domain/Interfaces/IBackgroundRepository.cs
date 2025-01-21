@@ -1,6 +1,6 @@
-﻿using PathforgerDb.Entities.Backgrounds;
+﻿using Pathforger.Entities.Entities.Backgrounds;
 
-namespace PathforgerDb.Interfaces;
+namespace PathforgerCore.Interfaces;
 
 public interface IBackgroundRepository
 {

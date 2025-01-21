@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PathforgerDb.Entities.Equipment;
+namespace Pathforger.Entities.Entities.Equipment;
 
 [Table("DamageTypes")]
 public class DamageTypeEntity

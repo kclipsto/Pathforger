@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PathforgerDb.Entities.Actions;
+namespace Pathforger.Entities.Entities.Actions;
 
 [Table("SkillActions")]
 public class SkillActionEntity : BasicActionEntity

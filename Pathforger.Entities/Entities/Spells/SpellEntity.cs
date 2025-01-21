@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using PathforgerDb.Entities.Base;
+using Pathforger.Entities.Entities.Base;
 
-namespace PathforgerDb.Entities.Spells;
+namespace Pathforger.Entities.Entities.Spells;
 
 [Table("Spells")]
 public class SpellEntity : BaseEntity

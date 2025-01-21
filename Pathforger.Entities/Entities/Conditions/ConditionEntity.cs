@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using PathforgerDb.Entities.Base;
+using Pathforger.Entities.Entities.Base;
 
-namespace PathforgerDb.Entities.Conditions;
+namespace Pathforger.Entities.Entities.Conditions;
  
 [Table("Conditions")]
 public class ConditionEntity : BaseEntity

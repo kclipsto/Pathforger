@@ -1,5 +1,5 @@
-﻿using PathforgerApi.Dtos.Backgrounds;
-using PathforgerDb.Entities.Backgrounds;
+﻿using Pathforger.Entities.Entities.Backgrounds;
+using PathforgerApi.Dtos.Backgrounds;
 
 namespace PathforgerApi.Profiles;
 

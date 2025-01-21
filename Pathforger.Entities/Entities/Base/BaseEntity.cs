@@ -1,4 +1,4 @@
-﻿namespace PathforgerDb.Entities.Base;
+﻿namespace Pathforger.Entities.Entities.Base;
 
 public class BaseEntity
 {

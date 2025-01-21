@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using PathforgerDb.Entities.Base;
+using Pathforger.Entities.Entities.Base;
 
-namespace PathforgerDb.Entities.Actions;
+namespace Pathforger.Entities.Entities.Actions;
 
 [Table("BasicActions")]
 public class BasicActionEntity : BaseEntity

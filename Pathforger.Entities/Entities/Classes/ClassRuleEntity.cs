@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using PathforgerDb.Entities.Base;
+using Pathforger.Entities.Entities.Base;
 
-namespace PathforgerDb.Entities.Classes;
+namespace Pathforger.Entities.Entities.Classes;
 
 [Table("ClassRules")]
 public class ClassRuleEntity : BaseEntity
