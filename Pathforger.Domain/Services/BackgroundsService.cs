@@ -1,7 +1,7 @@
-﻿using PathforgerDb.Entities.Backgrounds;
-using PathforgerDb.Interfaces;
+﻿using Pathforger.Entities.Entities.Backgrounds;
+using PathforgerCore.Interfaces;
 
-namespace PathforgerApi.Services;
+namespace PathforgerDb.Services;
 
 public class BackgroundService : IBackgroundService
 {

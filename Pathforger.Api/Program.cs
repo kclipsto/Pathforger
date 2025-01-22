@@ -1,23 +1,38 @@
-var builder = WebApplication.CreateBuilder(args);
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Pathforger.Infrastructure.Data.Backgrounds;
+using Pathforger.Infrastructure.Repositories;
+using PathforgerCore.Interfaces;
+using PathforgerDb;
+using PathforgerDb.Services;
+using BackgroundService = PathforgerDb.Services.BackgroundService;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+// 1. Register services
+builder.Services.AddDbContext<PathforgerDbContext>(options =>
+    options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreExampleDB;Trusted_Connection=True;"));
+
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+// Repositories, domain services, etc.
+builder.Services.AddScoped<IBackgroundRepository, EFBackgroundRepository>();
+builder.Services.AddScoped<IBackgroundService, BackgroundService>();
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// 2. Seeding
+using (var scope = app.Services.CreateScope())
 {
-    app.MapOpenApi();
+    var dbContext = scope.ServiceProvider.GetRequiredService<PathforgerDbContext>();
+    var mapper = scope.ServiceProvider.GetRequiredService<IMapper>();
+    dbContext.Database.EnsureCreated();
+
+    // seed backgrounds
+    await DataSeeder.SeedBackgroundsAsync(dbContext, mapper);
 }
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
+// 3. Run the app
 app.MapControllers();
-
 app.Run();

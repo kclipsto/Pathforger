@@ -4,16 +4,22 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>PathforgerApi</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PathforgerDb\PathforgerDb.csproj" />
+    <ProjectReference Include="..\Pathforger.Domain\Pathforger.Domain.csproj" />
+    <ProjectReference Include="..\Pathforger.Infrastructure\Pathforger.Infrastructure.csproj" />
+    <ProjectReference Include="..\Pathforger.Entities\Pathforger.Entities.csproj" />
   </ItemGroup>
 
 </Project>

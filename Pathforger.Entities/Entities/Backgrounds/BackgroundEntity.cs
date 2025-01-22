@@ -11,7 +11,7 @@ public class BackgroundEntity : BaseEntity
     public IList<string>? Boosts1 { get; set; } = []; 
     
     public string? Description { get; set; }
-    public IList<FeatEntity>? Feats { get; set; } = [];
+    public IList<BackgroundFeatEntity>? Feats { get; set; } = [];
     
     public string? TrainedSkillsCustom { get; set; }
     public IList<string>? TrainedSkillsLore { get; set; } = new List<string>();

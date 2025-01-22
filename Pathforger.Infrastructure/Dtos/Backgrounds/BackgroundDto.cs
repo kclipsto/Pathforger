@@ -2,71 +2,132 @@
 
 namespace PathforgerApi.Dtos.Backgrounds;
 
+using System.Text.Json.Serialization;
+
 public class BackgroundDto
 {
     [JsonPropertyName("_id")]
-    public string Id { get; set; }
+    public string? Id { get; set; }
 
-    public string Img { get; set; }
-    public string Name { get; set; }
-    public string Type { get; set; }
-    
-    public BackgroundSystemDto System { get; set; }
+    [JsonPropertyName("img")]
+    public string? Img { get; set; }
+
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    [JsonPropertyName("system")]
+    public BackgroundSystemDto? System { get; set; }
 }
 
 // The 'system' property in your JSON
 public class BackgroundSystemDto
 {
-    public BoostsDto Boosts { get; set; }
-    public DescriptionDto Description { get; set; }
-    public Dictionary<string, object> Items { get; set; } // or a custom ItemsDto if needed
+    [JsonPropertyName("boosts")]
+    public BoostsDto? Boosts { get; set; }
 
-    public PublicationDto Publication { get; set; }
-    public List<RuleDto> Rules { get; set; } = new List<RuleDto>();
-    public TrainedSkillsDto TrainedSkills { get; set; }
-    public TraitsDto Traits { get; set; }
+    [JsonPropertyName("description")]
+    public DescriptionDto? Description { get; set; }
+
+    [JsonPropertyName("items")]
+    public Dictionary<string, BackgroundFeatDto> Feats { get; set; } = [];
+
+    [JsonPropertyName("publication")]
+    public PublicationDto? Publication { get; set; }
+
+    [JsonPropertyName("rules")]
+    public IList<RuleDto>? Rules { get; set; }
+
+    [JsonPropertyName("trainedSkills")]
+    public TrainedSkillsDto? TrainedSkills { get; set; }
+
+    [JsonPropertyName("traits")]
+    public TraitsDto? Traits { get; set; }
+}
+
+public class BackgroundFeatDto
+{
+    [JsonPropertyName("img")]
+    public string? Img { get; set; }
+
+    [JsonPropertyName("level")]
+    public int Level { get; set; }
+
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    [JsonPropertyName("uuid")]
+    public string? Uuid { get; set; }
 }
 
 public class BoostsDto
 {
-    public BoostValueDto Zero { get; set; } // "0"
-    public BoostValueDto One { get; set; }  // "1"
+    // The JSON has "0" and "1" as keys; we can map them to "Zero" and "One" in C#.
+    [JsonPropertyName("0")]
+    public BoostValueDto? Zero { get; set; }
+
+    [JsonPropertyName("1")]
+    public BoostValueDto? One { get; set; }
 }
 
 public class BoostValueDto
 {
-    public List<string> Value { get; set; } = new();
+    [JsonPropertyName("value")]
+    public IList<string>? Value { get; set; }
 }
 
 public class DescriptionDto
 {
-    public string Value { get; set; }
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
 }
 
 public class PublicationDto
 {
-    public string License { get; set; }
+    [JsonPropertyName("license")]
+    public string? License { get; set; }
+
+    [JsonPropertyName("remaster")]
     public bool Remaster { get; set; }
-    public string Title { get; set; }
+
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 public class RuleDto
 {
+    [JsonPropertyName("allowDuplicate")]
     public bool AllowDuplicate { get; set; }
-    public string Key { get; set; }
-    public Dictionary<string, string> PreselectChoices { get; set; } 
-    public string Uuid { get; set; }
+
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    [JsonPropertyName("preselectChoices")]
+    public Dictionary<string, string>? PreselectChoices { get; set; }
+
+    [JsonPropertyName("uuid")]
+    public string? Uuid { get; set; }
 }
 
 public class TrainedSkillsDto
 {
-    public string Custom { get; set; }
-    public List<string> Lore { get; set; } = new();
-    public List<string> Value { get; set; } = new();
+    [JsonPropertyName("custom")]
+    public string? Custom { get; set; }
+
+    [JsonPropertyName("lore")]
+    public IList<string>? Lore { get; set; }
+
+    [JsonPropertyName("value")]
+    public IList<string>? Value { get; set; } 
 }
 
 public class TraitsDto
 {
-    public string Rarity { get; set; }
-    public List<string> Value { get; set; } = new();
+    [JsonPropertyName("rarity")]
+    public string? Rarity { get; set; }
+
+    [JsonPropertyName("value")]
+    public IList<string>? Value { get; set; }
 }

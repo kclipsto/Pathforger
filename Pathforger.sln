@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathforgerApi", "PathforgerApi\PathforgerApi.csproj", "{7E029C6C-FC72-43BB-ADC5-8FCF96101550}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathforger.Api", "Pathforger.Api\Pathforger.Api.csproj", "{7E029C6C-FC72-43BB-ADC5-8FCF96101550}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathforgerDb", "PathforgerDb\PathforgerDb.csproj", "{1A86F8FA-FCA3-4F61-8756-84CC82ED7E96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathforger.Domain", "Pathforger.Domain\Pathforger.Domain.csproj", "{1A86F8FA-FCA3-4F61-8756-84CC82ED7E96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathforgerMaui", "PathforgerMaui\PathforgerMaui.csproj", "{8745EB50-91F8-4D4B-98E7-C346F5753BC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathforger.Infrastructure", "Pathforger.Infrastructure\Pathforger.Infrastructure.csproj", "{1BBB411F-8494-45CB-AA0D-FCEA2B255206}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathforger.Entities", "Pathforger.Entities\Pathforger.Entities.csproj", "{56F42D76-4003-4F8B-A30F-46B34C13FA02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,14 @@ Global
 		{1A86F8FA-FCA3-4F61-8756-84CC82ED7E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A86F8FA-FCA3-4F61-8756-84CC82ED7E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A86F8FA-FCA3-4F61-8756-84CC82ED7E96}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8745EB50-91F8-4D4B-98E7-C346F5753BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8745EB50-91F8-4D4B-98E7-C346F5753BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8745EB50-91F8-4D4B-98E7-C346F5753BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8745EB50-91F8-4D4B-98E7-C346F5753BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBB411F-8494-45CB-AA0D-FCEA2B255206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBB411F-8494-45CB-AA0D-FCEA2B255206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBB411F-8494-45CB-AA0D-FCEA2B255206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBB411F-8494-45CB-AA0D-FCEA2B255206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F42D76-4003-4F8B-A30F-46B34C13FA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F42D76-4003-4F8B-A30F-46B34C13FA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F42D76-4003-4F8B-A30F-46B34C13FA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F42D76-4003-4F8B-A30F-46B34C13FA02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
